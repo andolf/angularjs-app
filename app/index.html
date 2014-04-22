@@ -1,0 +1,23 @@
+<!doctype html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>My app</title>
+		<link rel="stylesheet" href="css/application.css">
+	</head>
+	<body>
+
+		<div ng-view></div>
+
+		<!-- build:js scripts/scripts.js -->
+		<script src="components/jquery/dist/jquery.js"></script>
+		<script src="components/angular/angular.js"></script>
+		<script src="components/angular-route/angular-route.js"></script>
+		<script src="components/angular-resource/angular-resource.js"></script>
+		<script src="scripts/init.js"></script>
+		<script src="scripts/controllers/viewController.js"></script>
+		<!-- endbuild -->
+
+	</body>
+</html>

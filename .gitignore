@@ -26,4 +26,5 @@ node_modules
 app/components
 
 # Other
-.idea/
+.idea
+.sass-cache

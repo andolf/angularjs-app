@@ -1,7 +1,20 @@
-/**
- * Created with JetBrains PhpStorm.
- * User: christianandolf
- * Date: 22/04/14
- * Time: 22:35
- * To change this template use File | Settings | File Templates.
- */
+(function(angular) {
+	'use strict';
+
+	angular.module('myApp', []);
+	angular.module('myApp.controllers', []);
+
+	angular.module('myApp', [
+				'ngResource',
+				'ngRoute',
+				'myApp',
+				'myApp.controllers'
+			])
+			.config(['$routeProvider', function($routeProvider) {
+				$routeProvider
+						.when('/', {
+							templateUrl: 'views/home.html'
+						});
+			}]);
+
+}(window.angular));

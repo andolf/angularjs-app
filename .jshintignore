@@ -1,0 +1,10 @@
+app/components/**/*.js
+app/scripts/shared/libs/*.js
+app/scripts/shared/libs/**.js
+app/scripts/admin/*.js
+app/scripts/admin/**/*.js
+test/spec/*.js
+test/spec/**/*.js
+test/browser/*.js
+test/browser/**/*.js
+test/coverage/**/*.js
