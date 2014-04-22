@@ -1,0 +1,30 @@
+{
+  "name": "angularjs-app",
+  "version": "0.1.0",
+  "authors": [
+    "Christian Andolf <christian@weahead.se>"
+  ],
+  "description": "An example app.",
+  "main": "app.js",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "app/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.16",
+    "angular-mocks": "~1.2.16",
+    "angular-resource": "~1.2.16",
+    "angular-route": "~1.2.16",
+    "jquery": "~2.1.0"
+  }
+}
