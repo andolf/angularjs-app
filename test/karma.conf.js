@@ -10,33 +10,18 @@ module.exports = function (config) {
 
 		// list of files / patterns to load in the browser
 		files: [
-			'app/components/jquery/jquery.min.js',
-			'app/components/angular/angular.js',
+			'app/components/jquery/dist/jquery.min.js',
+			'app/components/angular/angular.min.js',
 			'app/components/angular-mocks/angular-mocks.js',
-			'app/components/angular-localstorage/localStorageModule.js',
 			'app/components/angular-resource/angular-resource.min.js',
 			'app/components/angular-route/angular-route.min.js',
-			'app/components/angular-cookie/angular-cookie.min.js',
-			'app/components/angular-mobile/angular-mobile.min.js',
-			'app/components/angular-translate/angular-translate.min.js',
-			'app/components/angular-hammer/angular-hammer.js',
-			'app/components/jquery-ui/ui/minified/jquery.ui.core.min.js',
-			'app/components/jquery-ui/ui/minified/jquery.ui.widget.min.js',
-			'app/components/jquery-ui/ui/minified/jquery.ui.mouse.min.js',
-			'app/components/jquery-ui/ui/minified/jquery.ui.droppable.min.js',
-			'app/components/jquery-ui/ui/minified/jquery.ui.draggable.min.js',
-			'app/components/angular-dragdrop/src/angular-dragdrop.min.js',
-			'app/components/jquery-simulate/jquery.simulate.js',
-			'app/components/hammerjs/dist/hammer.js',
+			'app/scripts/*.js',
 			'app/scripts/**/*.js',
-			'test/unit/**/*.js'
+			'test/**/*.js'
 		],
 
-		// list of files / patterns to exclude
-		exclude: ['test/spec/**/*.js'],
-
 		// web server port
-		port: 8080,
+		port: 5000,
 
 		// level of logging
 		// possible values: LOG_DISABLE || LOG_ERROR || LOG_WARN || LOG_INFO || LOG_DEBUG

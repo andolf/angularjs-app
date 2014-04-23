@@ -1,3 +1,7 @@
 body {
-  background-color: red;
+  background-color: whitesmoke;
+}
+
+.button-red {
+  background-color: #cc3533;
 }
