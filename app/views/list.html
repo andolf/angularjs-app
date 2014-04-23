@@ -1,8 +1,17 @@
 <div ng-controller="listController">
 
+	<h1>Items</h1>
 	<ul>
 		<li ng-repeat="item in items">
-			{{ item.text }}
+			<a href="" ng-click="addItem(item)">{{ item.text }}</a>
+		</li>
+	</ul>
+
+	<h1>Cart</h1>
+	<ul>
+		<li ng-repeat="item in cartItems track by $index">
+			{{ item.text }}
+			<a href="" ng-click="removeItem(item.$index)">Remove item</a>
 		</li>
 	</ul>
 

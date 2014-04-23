@@ -4,9 +4,9 @@
 	angular.module('myApp.controllers')
 			.controller('listController', [
 				'$scope',
-				'$q',
+				'Cart',
 				'Api',
-				function($scope, $q, Api) {
+				function($scope, Cart, Api) {
 
 					Api.test.get({
 						id: '123'
@@ -25,6 +25,20 @@
 							text: 'item3'
 						}
 					];
+
+					$scope.addItem = function(item) {
+						Cart.addItem(item);
+					};
+
+					$scope.removeItem = function(index) {
+						Cart.removeItem(index);
+					};
+
+					$scope.$watch(function() {
+						return Cart.items;
+					}, function() {
+						$scope.cartItems = Cart.items;
+					});
 
 				}]);
 

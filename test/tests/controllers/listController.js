@@ -1,7 +1,7 @@
 describe('Controller:', function() {
 	'use strict';
 
-	var $rootScope, $scope, $controller, $httpBackend, Api;
+	var $rootScope, $scope, $controller, $httpBackend, Cart, Api;
 
 	function createController() {
 		return $controller('listController', {
@@ -15,13 +15,20 @@ describe('Controller:', function() {
 		module('myApp.controllers');
 	});
 
-	beforeEach(inject(function(_$rootScope_, _$controller_, _$httpBackend_, _Api_) {
+	beforeEach(inject(function(_$rootScope_, _$controller_, _$httpBackend_, _Cart_, _Api_) {
 		$rootScope = _$rootScope_;
 		$scope = _$rootScope_.$new();
 		$controller = _$controller_;
 		$httpBackend = _$httpBackend_;
+		Cart = _Cart_;
 		Api = _Api_;
 	}));
+
+	beforeEach(function () {
+
+		Cart.items = [];
+
+	});
 
 	describe('listController', function() {
 
@@ -49,6 +56,25 @@ describe('Controller:', function() {
 				expect($scope.response.test).toBe(response.test);
 			});
 
+		});
+
+		it('should add item to cart', function () {
+			createController();
+			var item = { text: 'test' };
+			$scope.addItem(item);
+			expect(Cart.items.length).toBe(1);
+			expect(Cart.items[0]).toBe(item);
+		});
+
+		it('should remove item from cart', function () {
+			createController();
+			Cart.items = [
+				{ text: 'test' }
+			];
+			var index = 0;
+			$scope.removeItem(index);
+			expect(Cart.items.length).toBe(0);
+			expect(Cart.items[0]).toBeUndefined();
 		});
 
 	});
